@@ -8,3 +8,6 @@
 [submodule "Tag2Text"]
 	path = Tag2Text
 	url = https://github.com/xinyu1205/Tag2Text.git
+[submodule "segment-anything-fast"]
+	path = segment-anything-fast
+	url = https://github.com/pytorch-labs/segment-anything-fast.git
