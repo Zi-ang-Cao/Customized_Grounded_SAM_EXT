@@ -554,6 +554,9 @@ class TransformerEncoder(nn.Module):
                         memory_text,
                         key_padding_mask,
                         text_attention_mask,
+                        ######### NOTE: Add use_reentrant=True to enable checkpointing #########
+                        use_reentrant=True,
+
                     )
                 else:
                     output, memory_text = self.fusion_layers[layer_id](
@@ -581,6 +584,9 @@ class TransformerEncoder(nn.Module):
                     spatial_shapes,
                     level_start_index,
                     key_padding_mask,
+
+                    ######### NOTE: Add use_reentrant=True to enable checkpointing #########
+                    use_reentrant=True,
                 )
             else:
                 output = layer(
